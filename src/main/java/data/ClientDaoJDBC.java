@@ -54,7 +54,7 @@ public class ClientDaoJDBC {
             stmt = conn.prepareStatement(SQL_SELECT_BY_ID);
             stmt.setInt(1, client.getIdClient());
             rs = stmt.executeQuery();
-            rs.absolute(1);
+            rs.next();
             String name = rs.getString("name");
             String lastName = rs.getString("last_name");
             String email = rs.getString("email");

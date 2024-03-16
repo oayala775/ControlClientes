@@ -9,10 +9,10 @@
     </head>
     <body>
 
-        <jsp:include page="WEB-INF/pages/common/header.jsp"/>
-        <jsp:include page="WEB-INF/pages/common/buttonsNavbar.jsp"/>
-        <jsp:include page="WEB-INF/pages/client/clientsList.jsp"/>
-        <jsp:include page="WEB-INF/pages/common/footer.jsp"/>
+        <jsp:include page="/WEB-INF/pages/common/header.jsp"/>
+        <jsp:include page="/WEB-INF/pages/common/buttonsNavbar.jsp"/>
+        <jsp:include page="/WEB-INF/pages/client/clientsList.jsp"/>
+        <jsp:include page="/WEB-INF/pages/common/footer.jsp"/>
 
 
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>

@@ -13,23 +13,29 @@
                     <table class="table table-striped ">
                         <thead class="table-primary">
                             <tr>
-                                <th>#</th>
-                                <th>Name</th>
-                                <th>Balance</th>
-                                <th></th>
+                                <th class="th-sm">#</th>
+                                <th class="th-md">Name</th>
+                                <th class="th-md">Balance</th>
+                                <th class="th-sm"></th>
                             </tr>
                         </thead>
                         <tbody>
-                            <c:forEach var="client" items="${clients}">
+                            <c:forEach var="client" items="${clients}" varStatus="status">
                                 <tr>
-                                    <td>${client.idClient}</td>
+                                    <td>${status.count}</td>
                                     <td>${client.name} ${client.lastName}</td>
                                     <td> <fmt:formatNumber value="${client.balance}" type="currency"/> </td>
+                                    <!-- Edit button -->
                                     <td>
                                         <a href="${pageContext.request.contextPath}/ControllerServlet?accion=edit&idClient=${client.idClient}"
                                            class="btn btn-secondary">
-                                            <i class="fa-solid fa-pen"></i> Edit
+                                            <i class="fa-solid fa-pen"></i>
                                         </a>
+                                        <a href="${pageContext.request.contextPath}/ControllerServlet?accion=delete&idClient=${client.idClient}"
+                                           class="btn btn-danger">
+                                            <i class="fa-solid fa-trash"></i>
+                                        </a>
+                                        
                                     </td>
                                 </tr>
                             </c:forEach>
@@ -56,3 +62,5 @@
         </div>
     </div>
 </section>
+
+<jsp:include page="/WEB-INF/pages/client/addClient.jsp" />
